@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login</title>
+
+  <nav>
+    <div>Polyvend Machine</div>
+    <ul>
+      <li><a href="Homepage.html">Home</a></li>
+      </ul>
+    </nav>
+
+
+  <style>
+
+    nav {
+      position: absolute;
+      top: 0;
+      width: 97.5%;
+      background-color: rgba(17, 17, 17, 0.9);
+      color: white;
+      padding: 15px 30px; 
+      display: flex;
+      justify-content: space-between;
+      z-index: 10;
+      margin-bottom: 20px;
+    }
+nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #00ffff;
+    }
+    body {
+      background: #0a0a0a;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+   .login-box {
+      top: 30%; 
+      position: absolute;
+      /* margin-left: 100px; */
+      background: #111;
+      padding: 60px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffff;
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding-left: 15px;
+      padding: 7px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    button {
+      padding: 12px 24px;
+      background-color: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00cccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>Student Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+    function login() {
+      // You can replace this with real validation logic
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if (user === "student" && pass === "123") {
+        window.location.href = "student-page.html";
+      } else {
+        alert("Incorrect credentials. Try: student / 123");
+      }
+    }
+  </script>
+
+</body>
+</html>
